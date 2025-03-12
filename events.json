@@ -1,0 +1,122 @@
+[
+    {
+        "model": "events.event",
+        "pk": 1,
+        "fields": {
+            "title": "Music Concert",
+            "description": "An exciting evening of live music performances by top artists.",
+            "date": "2025-05-15",
+            "location": "City Hall, Downtown",
+            "total_seats": 200,
+            "available_seats": 200
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 2,
+        "fields": {
+            "title": "Tech Conference 2025",
+            "description": "A gathering of innovators, tech enthusiasts, and industry experts.",
+            "date": "2025-06-10",
+            "location": "Tech Arena, Silicon Valley",
+            "total_seats": 500,
+            "available_seats": 500
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 3,
+        "fields": {
+            "title": "Art Exhibition",
+            "description": "A showcase of contemporary art by local artists.",
+            "date": "2025-07-01",
+            "location": "Art Gallery, Central Park",
+            "total_seats": 150,
+            "available_seats": 150
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 4,
+        "fields": {
+            "title": "Food Festival",
+            "description": "A celebration of culinary delights from around the world.",
+            "date": "2025-08-20",
+            "location": "Riverfront Park",
+            "total_seats": 300,
+            "available_seats": 300
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 5,
+        "fields": {
+            "title": "Comedy Show",
+            "description": "A night full of laughter with top stand-up comedians.",
+            "date": "2025-09-05",
+            "location": "Comedy Club, Uptown",
+            "total_seats": 100,
+            "available_seats": 100
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 6,
+        "fields": {
+            "title": "Yoga Retreat",
+            "description": "A peaceful retreat for yoga enthusiasts and wellness seekers.",
+            "date": "2025-10-10",
+            "location": "Mountain Resort, Hilltop",
+            "total_seats": 50,
+            "available_seats": 50
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 7,
+        "fields": {
+            "title": "Science Expo",
+            "description": "A day of interactive exhibitions and experiments for curious minds.",
+            "date": "2025-11-03",
+            "location": "Expo Center, Science Park",
+            "total_seats": 250,
+            "available_seats": 250
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 8,
+        "fields": {
+            "title": "Fashion Show",
+            "description": "A glamorous evening of high fashion and runway shows.",
+            "date": "2025-12-05",
+            "location": "Grand Ballroom, Hilton Hotel",
+            "total_seats": 150,
+            "available_seats": 150
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 9,
+        "fields": {
+            "title": "Football Match",
+            "description": "An exciting football match between top league teams.",
+            "date": "2025-09-25",
+            "location": "Stadium, Downtown",
+            "total_seats": 400,
+            "available_seats": 400
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 10,
+        "fields": {
+            "title": "Cooking Class",
+            "description": "Learn to cook gourmet meals in this hands-on class.",
+            "date": "2025-08-15",
+            "location": "Culinary School, Uptown",
+            "total_seats": 30,
+            "available_seats": 30
+        }
+    }
+]
