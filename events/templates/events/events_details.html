@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <h2>event details page:{{id}}</h2>
+<body class="bg-gray-100 p-5">
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-5">
+        <h2 class="text-3xl font-bold">{{event.title}}</h2>
+        <p>{{event.description}}</p>
+        <p class="text-gray-600"><strong>Date:</strong> {{event.date}}</p>
+        <p class="text-gray-600"><strong>Location:</strong> {{event.location}}</p>
+        <p class="text-gray-600"><strong>Total-seats:</strong> {{event.total_seats}}</p>
+        <p class="text-gray-600"><strong>Available seats:</strong> {{event.available_seats}}</p>
+
+        <button href="#" class="bg-blue-500 rounded-lg text-white mt-5 px-4 py-2">Book now </button>
+    </div>
+
 </body>
 </html>
