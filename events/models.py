@@ -13,3 +13,8 @@ class Event(models.Model):
     
     def __str__(self):
         return self.title
+    
+class Booking(models.Model):
+    event=models.ForeignKey(Event,on_delete=models.CASCADE)
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    booked_at=models.DateTimeField(auto_now_add=True)
