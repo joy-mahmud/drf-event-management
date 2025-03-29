@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-gray-100 p-5">
+    {% include "events/header.html" %}
     <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-5">
         <h2 class="text-3xl font-bold">{{event.title}}</h2>
         <p>{{event.description}}</p>
@@ -16,10 +17,11 @@
         <p class="text-gray-600"><strong>Available seats:</strong> {{event.available_seats}}</p>
 
        <div class="flex gap-5 ">
-        <form action="{% url 'api-event-booking' event.id %}" method='POST'>
+        {% comment %} <form action="{% url 'book_event' event.id %}" method='POST'>
             {% csrf_token %}
             <button class="bg-blue-500 rounded-lg text-white mt-5 px-4 py-2 hover:cursor-pointer" type="submit">Book now </button>
-        </form>
+        </form> {% endcomment %}
+        <a href="{% url 'book_event' event.id%}" class="bg-blue-500 rounded-lg text-white mt-5 px-4 py-2 hover:cursor-pointer">Book now</a>
 
         <a href="{% url 'home' %}" class="bg-blue-500 rounded-lg text-white mt-5 px-4 py-2">Back to home</a>
        </div>

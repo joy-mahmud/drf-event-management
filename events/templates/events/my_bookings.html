@@ -7,12 +7,13 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-gray-100">
+    {% include "events/header.html" %}
   <div class="container mx-auto my-8 p-6 bg-white shadow-lg rounded-lg">
     <h1 class="text-2xl font-bold text-gray-700 mb-6">My bookings</h1>
     <div class="space-y-6">
         {% for booking in bookings %}
         <div class="p-4 rounded-lg bg-gray-50 shadow-lg">
-            <h2 class="text-xl font-semibold text-indigo-600">{{booking.event.title}}</h2>
+            <h2 class="text-xl font-semibold text-indigo-600">{{booking.id}}.{{booking.event.title}}</h2>
             <p class="text-gray-700 mt-1">{{booking.event.description}}</p>
             <div class="mt-3">
                 <p>Date: {{booking.event.date}}</p>
@@ -20,6 +21,7 @@
                 
             </div>
             <p class="text-sm text-gray-500 mt-4">Booked on: {{booking.booked_at}}</p>
+            <a  href="{% url 'cancel' booking.id %}" class="px-5 py-2 bg-red-600 rounded-lg mt-5 inline-block text-white">cancel booking</a>
         </div>
         
         {% endfor %}

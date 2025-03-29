@@ -38,9 +38,19 @@ class EventBookingApiView(APIView):
             return Response({"message":"Event booked successfully"},status=status.HTTP_201_CREATED)
 
 class MyBookingsView(APIView):
-    def get(self,request):
-        bookings =Booking.objects.filter(user=request.user)
+    permission_classes = [IsAuthenticated]
+    def get(self, request):
+        bookings = Booking.objects.filter(user=request.user)
         serializer = BookingSerializer(bookings,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
+        #return render(request, "events/my_bookings.html", {"bookings": bookings})
         
         
+class CancelBookingView(APIView):
+    def delete(self, request, booking_id):
+        try:
+            booking = Booking.objects.get(id=booking_id)
+            booking.delete()
+            return Response({"message": "Booking canceled successfully."}, status=status.HTTP_204_NO_CONTENT)
+        except Booking.DoesNotExist:
+            return Response({"error": "Booking not found."}, status=status.HTTP_404_NOT_FOUND)
